@@ -13,7 +13,7 @@ export async function loginAthleteAction(prevState: any, formData: FormData) {
     }
 
     const athletes = await getAthletes();
-    const athlete = athletes.find(a => a.id === id);
+    const athlete = athletes.find(a => a.id === id || a.email === id);
 
     if (!athlete || athlete.password !== password) {
         return { error: 'Invalid ID or Password' };
