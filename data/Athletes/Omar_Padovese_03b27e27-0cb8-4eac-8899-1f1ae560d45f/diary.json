@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2025-12-08",
+    "hrv": 54,
+    "hrr": 48,
+    "trafficLight": "YELLOW",
+    "notes": "",
+    "sleepQuality": 7,
+    "sleepDuration": 7.5,
+    "fatigue": 4,
+    "stress": 5,
+    "soreness": 2
+  }
+]

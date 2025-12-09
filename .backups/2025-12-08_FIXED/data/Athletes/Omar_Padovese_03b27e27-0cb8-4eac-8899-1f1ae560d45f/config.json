@@ -1,0 +1,3736 @@
+{
+  "id": "03b27e27-0cb8-4eac-8899-1f1ae560d45f",
+  "name": "Omar Padovese",
+  "email": "omartec.op@xn--gmail-yta.com",
+  "password": "omar123",
+  "onboardingCompleted": true,
+  "createdAt": "2025-12-07T20:32:53.087Z",
+  "category": "MASTER",
+  "sex": "M",
+  "dob": "1979-12-22",
+  "weight": 72,
+  "height": 175,
+  "documents": [
+    {
+      "type": "QUESTIONNAIRE",
+      "status": "UPLOADED",
+      "url": "/api/documents/03b27e27-0cb8-4eac-8899-1f1ae560d45f/questionnaire_1765140074855.pdf",
+      "uploadedAt": "2025-12-07T20:41:14.856Z"
+    },
+    {
+      "type": "ANAMNESIS",
+      "status": "UPLOADED",
+      "url": "/api/documents/03b27e27-0cb8-4eac-8899-1f1ae560d45f/anamnesis_1765140083699.pdf",
+      "uploadedAt": "2025-12-07T20:41:23.701Z"
+    },
+    {
+      "type": "ETHICS",
+      "status": "UPLOADED",
+      "url": "/api/documents/03b27e27-0cb8-4eac-8899-1f1ae560d45f/ethics_1765140091837.pdf",
+      "uploadedAt": "2025-12-07T20:41:31.840Z"
+    },
+    {
+      "type": "MEDICAL_CERTIFICATE",
+      "status": "UPLOADED",
+      "url": "/api/documents/03b27e27-0cb8-4eac-8899-1f1ae560d45f/medical_certificate_1765140105216.jpg",
+      "uploadedAt": "2025-12-07T20:41:45.226Z"
+    }
+  ],
+  "address": "Concordia Saggittaria",
+  "bmi": 23.5,
+  "somatotype": "Mesomorph",
+  "metrics": {
+    "updatedAt": "2025-12-08T20:22:52.590Z",
+    "powerCurve": [
+      {
+        "duration": 180,
+        "watts": 333,
+        "date": "2025-12-03T17:12:49.000Z"
+      },
+      {
+        "duration": 300,
+        "watts": 326,
+        "date": "2025-12-07T08:14:19.000Z"
+      },
+      {
+        "duration": 720,
+        "watts": 283,
+        "date": "2025-12-02T17:57:10.000Z"
+      }
+    ],
+    "cp": 263,
+    "wPrime": 15434
+  },
+  "best_3min": 333,
+  "assignments": [
+    {
+      "id": "meso_1765145718733_w5_d1",
+      "date": "2026-01-05",
+      "workoutId": "mesocycle_meso_1765145718733",
+      "workoutName": "Recupero Attivo",
+      "workoutStructure": {
+        "dayOfWeek": 1,
+        "name": "Recupero Attivo",
+        "description": "Pedalata leggera per recupero",
+        "duration": 60,
+        "tss": 40,
+        "type": "recupero",
+        "intervals": [
+          {
+            "type": "lavoro",
+            "duration": 3600,
+            "power": {
+              "min": 112,
+              "max": 150,
+              "target": 131
+            },
+            "description": "Zona 1 facile (45-55% FTP)"
+          }
+        ],
+        "coachNotes": "Workout generato da protocollo Polarized Training"
+      },
+      "status": "PENDING",
+      "notes": "Workout generato da protocollo Polarized Training",
+      "assignedBy": "coach_1",
+      "assignedAt": "2025-12-07T22:15:22.471Z"
+    },
+    {
+      "id": "meso_1765145718733_w5_d3",
+      "date": "2026-01-07",
+      "workoutId": "mesocycle_meso_1765145718733",
+      "workoutName": "Recupero Attivo",
+      "workoutStructure": {
+        "dayOfWeek": 3,
+        "name": "Recupero Attivo",
+        "description": "Pedalata leggera per recupero",
+        "duration": 60,
+        "tss": 40,
+        "type": "recupero",
+        "intervals": [
+          {
+            "type": "lavoro",
+            "duration": 3600,
+            "power": {
+              "min": 112,
+              "max": 150,
+              "target": 131
+            },
+            "description": "Zona 1 facile (45-55% FTP)"
+          }
+        ],
+        "coachNotes": "Workout generato da protocollo Polarized Training"
+      },
+      "status": "PENDING",
+      "notes": "Workout generato da protocollo Polarized Training",
+      "assignedBy": "coach_1",
+      "assignedAt": "2025-12-07T22:15:22.471Z"
+    },
+    {
+      "id": "meso_1765145718733_w5_d5",
+      "date": "2026-01-09",
+      "workoutId": "mesocycle_meso_1765145718733",
+      "workoutName": "Recupero Attivo",
+      "workoutStructure": {
+        "dayOfWeek": 5,
+        "name": "Recupero Attivo",
+        "description": "Pedalata leggera per recupero",
+        "duration": 60,
+        "tss": 40,
+        "type": "recupero",
+        "intervals": [
+          {
+            "type": "lavoro",
+            "duration": 3600,
+            "power": {
+              "min": 112,
+              "max": 150,
+              "target": 131
+            },
+            "description": "Zona 1 facile (45-55% FTP)"
+          }
+        ],
+        "coachNotes": "Workout generato da protocollo Polarized Training"
+      },
+      "status": "PENDING",
+      "notes": "Workout generato da protocollo Polarized Training",
+      "assignedBy": "coach_1",
+      "assignedAt": "2025-12-07T22:15:22.471Z"
+    },
+    {
+      "id": "meso_1765145718733_w5_d6",
+      "date": "2026-01-10",
+      "workoutId": "mesocycle_meso_1765145718733",
+      "workoutName": "Recupero Attivo",
+      "workoutStructure": {
+        "dayOfWeek": 6,
+        "name": "Recupero Attivo",
+        "description": "Pedalata leggera per recupero",
+        "duration": 60,
+        "tss": 40,
+        "type": "recupero",
+        "intervals": [
+          {
+            "type": "lavoro",
+            "duration": 3600,
+            "power": {
+              "min": 112,
+              "max": 150,
+              "target": 131
+            },
+            "description": "Zona 1 facile (45-55% FTP)"
+          }
+        ],
+        "coachNotes": "Workout generato da protocollo Polarized Training"
+      },
+      "status": "PENDING",
+      "notes": "Workout generato da protocollo Polarized Training",
+      "assignedBy": "coach_1",
+      "assignedAt": "2025-12-07T22:15:22.471Z"
+    }
+  ],
+  "best_5min": 326,
+  "cp": 263,
+  "w_prime": 15434,
+  "ftp": 252,
+  "best_12min": 283,
+  "mesocycles": [
+    {
+      "id": "meso_1765144376386",
+      "athleteId": "03b27e27-0cb8-4eac-8899-1f1ae560d45f",
+      "coachId": "coach_1",
+      "name": "Polarized Training - 3 settimane",
+      "description": "Allenamento polarizzato 80/20 secondo Seiler",
+      "startDate": "2025-12-07",
+      "endDate": "2025-12-28",
+      "weeks": 3,
+      "protocol": {
+        "id": "polarized",
+        "name": "Polarized Training",
+        "rationale": "TSB (-2) è nel range ottimale. HRV status (yellow) è compatibile. Readiness (67) è sufficiente. Livello esperienza compatibile",
+        "expectedAdaptations": [
+          "Massimo sviluppo VO2 Max",
+          "Mantenimento base aerobica eccellente",
+          "Miglioramento potenza di picco",
+          "Aumento capacità di recupero",
+          "Preparazione gare endurance"
+        ]
+      },
+      "analysis": {
+        "athleteId": "03b27e27-0cb8-4eac-8899-1f1ae560d45f",
+        "analysisDate": "2025-12-07T21:52:54.571Z",
+        "hrv": {
+          "current": 65,
+          "baseline": 70,
+          "status": "yellow",
+          "trend": "stable",
+          "daysInStatus": 3
+        },
+        "pmc": {
+          "ctl": 2.4,
+          "atl": 4.4,
+          "tsb": -2,
+          "formStatus": "fatigued"
+        },
+        "readiness": {
+          "score": 67,
+          "factors": {
+            "hrvContribution": 37,
+            "tsbContribution": 20,
+            "recentLoadContribution": 10
+          }
+        },
+        "recent": {
+          "weeklyTSS": [
+            0
+          ],
+          "avgTSSPerWeek": 0,
+          "completionRate": 85,
+          "powerCurveTrends": []
+        },
+        "profile": {
+          "ftp": 252,
+          "weight": 72,
+          "experience": "intermedio",
+          "goals": [],
+          "availableHoursPerWeek": 10,
+          "daysPerWeek": 5
+        },
+        "constraints": {}
+      },
+      "weeklyStructure": [
+        {
+          "week": 1,
+          "focus": "Adattamento iniziale",
+          "targetTSS": 300,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "VO2 Max Intervals",
+              "description": "Intervalli ad alta intensità",
+              "duration": 90,
+              "tss": 165,
+              "type": "vo2max",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 900,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 180,
+                  "power": {
+                    "min": 275,
+                    "max": 300,
+                    "target": 287
+                  },
+                  "description": "3min @ 115% FTP"
+                },
+                {
+                  "type": "recupero",
+                  "duration": 180,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Recupero"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 180,
+                  "power": {
+                    "min": 275,
+                    "max": 300,
+                    "target": 287
+                  },
+                  "description": "3min @ 115% FTP"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 2,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "focus": "Carico massimo",
+          "targetTSS": 340,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "VO2 Max Intervals",
+              "description": "Intervalli ad alta intensità",
+              "duration": 90,
+              "tss": 165,
+              "type": "vo2max",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 900,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 180,
+                  "power": {
+                    "min": 275,
+                    "max": 300,
+                    "target": 287
+                  },
+                  "description": "3min @ 115% FTP"
+                },
+                {
+                  "type": "recupero",
+                  "duration": 180,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Recupero"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 180,
+                  "power": {
+                    "min": 275,
+                    "max": 300,
+                    "target": 287
+                  },
+                  "description": "3min @ 115% FTP"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 2,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "focus": "Recupero e consolidamento",
+          "targetTSS": 380,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            }
+          ]
+        }
+      ],
+      "status": "approved",
+      "approvedBy": "coach_1",
+      "approvedAt": "2025-12-07T21:53:28.451Z",
+      "createdAt": "2025-12-07T21:53:28.466Z"
+    },
+    {
+      "id": "meso_1765144920235",
+      "athleteId": "03b27e27-0cb8-4eac-8899-1f1ae560d45f",
+      "coachId": "coach_1",
+      "name": "Endurance Base Building - 4 settimane",
+      "description": "Costruzione base aerobica secondo metodologia Seiler Zone 2",
+      "startDate": "2025-12-07",
+      "endDate": "2026-01-04",
+      "weeks": 4,
+      "protocol": {
+        "id": "endurance-base",
+        "name": "Endurance Base Building",
+        "rationale": "TSB (-2) è nel range ottimale. HRV status (yellow) è compatibile. Readiness (67) è sufficiente. Livello esperienza compatibile",
+        "expectedAdaptations": [
+          "Aumento densità capillari muscolari",
+          "Miglioramento efficienza mitocondriale",
+          "Aumento capacità ossidativa dei grassi",
+          "Sviluppo base aerobica solida",
+          "Preparazione per lavoro ad alta intensità"
+        ]
+      },
+      "analysis": {
+        "athleteId": "03b27e27-0cb8-4eac-8899-1f1ae560d45f",
+        "analysisDate": "2025-12-07T22:01:58.138Z",
+        "hrv": {
+          "current": 65,
+          "baseline": 70,
+          "status": "yellow",
+          "trend": "stable",
+          "daysInStatus": 3
+        },
+        "pmc": {
+          "ctl": 2.4,
+          "atl": 4.4,
+          "tsb": -2,
+          "formStatus": "fatigued"
+        },
+        "readiness": {
+          "score": 67,
+          "factors": {
+            "hrvContribution": 37,
+            "tsbContribution": 20,
+            "recentLoadContribution": 10
+          }
+        },
+        "recent": {
+          "weeklyTSS": [
+            0
+          ],
+          "avgTSSPerWeek": 0,
+          "completionRate": 85,
+          "powerCurveTrends": []
+        },
+        "profile": {
+          "ftp": 252,
+          "weight": 72,
+          "experience": "intermedio",
+          "goals": [],
+          "availableHoursPerWeek": 10,
+          "daysPerWeek": 5
+        },
+        "constraints": {}
+      },
+      "weeklyStructure": [
+        {
+          "week": 1,
+          "focus": "Adattamento iniziale",
+          "targetTSS": 250,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "focus": "Progressione Endurance Base Building",
+          "targetTSS": 280,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "focus": "Carico massimo",
+          "targetTSS": 310,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "focus": "Recupero e consolidamento",
+          "targetTSS": 220,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            }
+          ]
+        }
+      ],
+      "status": "approved",
+      "approvedBy": "coach_1",
+      "approvedAt": "2025-12-07T22:02:26.410Z",
+      "createdAt": "2025-12-07T22:02:26.425Z"
+    },
+    {
+      "id": "meso_1765145084642",
+      "athleteId": "03b27e27-0cb8-4eac-8899-1f1ae560d45f",
+      "coachId": "coach_1",
+      "name": "Endurance Base Building - 4 settimane",
+      "description": "Costruzione base aerobica secondo metodologia Seiler Zone 2",
+      "startDate": "2025-12-07",
+      "endDate": "2026-01-04",
+      "weeks": 4,
+      "protocol": {
+        "id": "endurance-base",
+        "name": "Endurance Base Building",
+        "rationale": "TSB (-2) è nel range ottimale. HRV status (yellow) è compatibile. Readiness (67) è sufficiente. Livello esperienza compatibile",
+        "expectedAdaptations": [
+          "Aumento densità capillari muscolari",
+          "Miglioramento efficienza mitocondriale",
+          "Aumento capacità ossidativa dei grassi",
+          "Sviluppo base aerobica solida",
+          "Preparazione per lavoro ad alta intensità"
+        ]
+      },
+      "analysis": {
+        "athleteId": "03b27e27-0cb8-4eac-8899-1f1ae560d45f",
+        "analysisDate": "2025-12-07T22:04:42.924Z",
+        "hrv": {
+          "current": 65,
+          "baseline": 70,
+          "status": "yellow",
+          "trend": "stable",
+          "daysInStatus": 3
+        },
+        "pmc": {
+          "ctl": 2.4,
+          "atl": 4.4,
+          "tsb": -2,
+          "formStatus": "fatigued"
+        },
+        "readiness": {
+          "score": 67,
+          "factors": {
+            "hrvContribution": 37,
+            "tsbContribution": 20,
+            "recentLoadContribution": 10
+          }
+        },
+        "recent": {
+          "weeklyTSS": [
+            0
+          ],
+          "avgTSSPerWeek": 0,
+          "completionRate": 85,
+          "powerCurveTrends": []
+        },
+        "profile": {
+          "ftp": 252,
+          "weight": 72,
+          "experience": "intermedio",
+          "goals": [],
+          "availableHoursPerWeek": 10,
+          "daysPerWeek": 5
+        },
+        "constraints": {}
+      },
+      "weeklyStructure": [
+        {
+          "week": 1,
+          "focus": "Adattamento iniziale",
+          "targetTSS": 250,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "focus": "Progressione Endurance Base Building",
+          "targetTSS": 280,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "focus": "Carico massimo",
+          "targetTSS": 310,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "focus": "Recupero e consolidamento",
+          "targetTSS": 220,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            }
+          ]
+        }
+      ],
+      "status": "approved",
+      "approvedBy": "coach_1",
+      "approvedAt": "2025-12-07T22:06:09.490Z",
+      "createdAt": "2025-12-07T22:06:09.506Z"
+    },
+    {
+      "id": "meso_1765145657186",
+      "athleteId": "03b27e27-0cb8-4eac-8899-1f1ae560d45f",
+      "coachId": "coach_1",
+      "name": "Endurance Base Building - 4 settimane",
+      "description": "Costruzione base aerobica secondo metodologia Seiler Zone 2",
+      "startDate": "2025-12-07",
+      "endDate": "2026-01-04",
+      "weeks": 4,
+      "protocol": {
+        "id": "endurance-base",
+        "name": "Endurance Base Building",
+        "rationale": "TSB (-2) è nel range ottimale. HRV status (yellow) è compatibile. Readiness (67) è sufficiente. Livello esperienza compatibile",
+        "expectedAdaptations": [
+          "Aumento densità capillari muscolari",
+          "Miglioramento efficienza mitocondriale",
+          "Aumento capacità ossidativa dei grassi",
+          "Sviluppo base aerobica solida",
+          "Preparazione per lavoro ad alta intensità"
+        ]
+      },
+      "analysis": {
+        "athleteId": "03b27e27-0cb8-4eac-8899-1f1ae560d45f",
+        "analysisDate": "2025-12-07T22:14:15.385Z",
+        "hrv": {
+          "current": 65,
+          "baseline": 70,
+          "status": "yellow",
+          "trend": "stable",
+          "daysInStatus": 3
+        },
+        "pmc": {
+          "ctl": 2.4,
+          "atl": 4.4,
+          "tsb": -2,
+          "formStatus": "fatigued"
+        },
+        "readiness": {
+          "score": 67,
+          "factors": {
+            "hrvContribution": 37,
+            "tsbContribution": 20,
+            "recentLoadContribution": 10
+          }
+        },
+        "recent": {
+          "weeklyTSS": [
+            0
+          ],
+          "avgTSSPerWeek": 0,
+          "completionRate": 85,
+          "powerCurveTrends": []
+        },
+        "profile": {
+          "ftp": 252,
+          "weight": 72,
+          "experience": "intermedio",
+          "goals": [],
+          "availableHoursPerWeek": 10,
+          "daysPerWeek": 5
+        },
+        "constraints": {}
+      },
+      "weeklyStructure": [
+        {
+          "week": 1,
+          "focus": "Adattamento iniziale",
+          "targetTSS": 250,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "focus": "Progressione Endurance Base Building",
+          "targetTSS": 280,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "focus": "Carico massimo",
+          "targetTSS": 310,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "focus": "Recupero e consolidamento",
+          "targetTSS": 220,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Endurance Base Building"
+            }
+          ]
+        }
+      ],
+      "status": "approved",
+      "approvedBy": "coach_1",
+      "approvedAt": "2025-12-07T22:14:21.215Z",
+      "createdAt": "2025-12-07T22:14:21.230Z"
+    },
+    {
+      "id": "meso_1765145718733",
+      "athleteId": "03b27e27-0cb8-4eac-8899-1f1ae560d45f",
+      "coachId": "coach_1",
+      "name": "Polarized Training - 5 settimane",
+      "description": "Allenamento polarizzato 80/20 secondo Seiler",
+      "startDate": "2025-12-07",
+      "endDate": "2026-01-11",
+      "weeks": 5,
+      "protocol": {
+        "id": "polarized",
+        "name": "Polarized Training",
+        "rationale": "TSB (-2) è nel range ottimale. HRV status (yellow) è compatibile. Readiness (67) è sufficiente. Livello esperienza compatibile",
+        "expectedAdaptations": [
+          "Massimo sviluppo VO2 Max",
+          "Mantenimento base aerobica eccellente",
+          "Miglioramento potenza di picco",
+          "Aumento capacità di recupero",
+          "Preparazione gare endurance"
+        ]
+      },
+      "analysis": {
+        "athleteId": "03b27e27-0cb8-4eac-8899-1f1ae560d45f",
+        "analysisDate": "2025-12-07T22:15:15.816Z",
+        "hrv": {
+          "current": 65,
+          "baseline": 70,
+          "status": "yellow",
+          "trend": "stable",
+          "daysInStatus": 3
+        },
+        "pmc": {
+          "ctl": 2.4,
+          "atl": 4.4,
+          "tsb": -2,
+          "formStatus": "fatigued"
+        },
+        "readiness": {
+          "score": 67,
+          "factors": {
+            "hrvContribution": 37,
+            "tsbContribution": 20,
+            "recentLoadContribution": 10
+          }
+        },
+        "recent": {
+          "weeklyTSS": [
+            0
+          ],
+          "avgTSSPerWeek": 0,
+          "completionRate": 85,
+          "powerCurveTrends": []
+        },
+        "profile": {
+          "ftp": 252,
+          "weight": 72,
+          "experience": "intermedio",
+          "goals": [],
+          "availableHoursPerWeek": 10,
+          "daysPerWeek": 5
+        },
+        "constraints": {}
+      },
+      "weeklyStructure": [
+        {
+          "week": 1,
+          "focus": "Adattamento iniziale",
+          "targetTSS": 300,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "VO2 Max Intervals",
+              "description": "Intervalli ad alta intensità",
+              "duration": 90,
+              "tss": 165,
+              "type": "vo2max",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 900,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 180,
+                  "power": {
+                    "min": 275,
+                    "max": 300,
+                    "target": 287
+                  },
+                  "description": "3min @ 115% FTP"
+                },
+                {
+                  "type": "recupero",
+                  "duration": 180,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Recupero"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 180,
+                  "power": {
+                    "min": 275,
+                    "max": 300,
+                    "target": 287
+                  },
+                  "description": "3min @ 115% FTP"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 2,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "focus": "Progressione Polarized Training",
+          "targetTSS": 340,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "VO2 Max Intervals",
+              "description": "Intervalli ad alta intensità",
+              "duration": 90,
+              "tss": 165,
+              "type": "vo2max",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 900,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 180,
+                  "power": {
+                    "min": 275,
+                    "max": 300,
+                    "target": 287
+                  },
+                  "description": "3min @ 115% FTP"
+                },
+                {
+                  "type": "recupero",
+                  "duration": 180,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Recupero"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 180,
+                  "power": {
+                    "min": 275,
+                    "max": 300,
+                    "target": 287
+                  },
+                  "description": "3min @ 115% FTP"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 2,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "focus": "Progressione Polarized Training",
+          "targetTSS": 380,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "VO2 Max Intervals",
+              "description": "Intervalli ad alta intensità",
+              "duration": 90,
+              "tss": 165,
+              "type": "vo2max",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 900,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 180,
+                  "power": {
+                    "min": 275,
+                    "max": 300,
+                    "target": 287
+                  },
+                  "description": "3min @ 115% FTP"
+                },
+                {
+                  "type": "recupero",
+                  "duration": 180,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Recupero"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 180,
+                  "power": {
+                    "min": 275,
+                    "max": 300,
+                    "target": 287
+                  },
+                  "description": "3min @ 115% FTP"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 180,
+              "tss": 195,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 9600,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 2,
+              "name": "Endurance Base",
+              "description": "Uscita base aerobica in Zona 2",
+              "duration": 90,
+              "tss": 98,
+              "type": "endurance",
+              "intervals": [
+                {
+                  "type": "riscaldamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 125,
+                    "max": 175,
+                    "target": 150
+                  },
+                  "description": "Riscaldamento progressivo"
+                },
+                {
+                  "type": "lavoro",
+                  "duration": 4200,
+                  "power": {
+                    "min": 162,
+                    "max": 187,
+                    "target": 175
+                  },
+                  "description": "Zona 2 costante (65-75% FTP)"
+                },
+                {
+                  "type": "defaticamento",
+                  "duration": 600,
+                  "power": {
+                    "min": 100,
+                    "max": 150,
+                    "target": 125
+                  },
+                  "description": "Defaticamento graduale"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "focus": "Carico massimo",
+          "targetTSS": 420,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "focus": "Recupero e consolidamento",
+          "targetTSS": 420,
+          "workouts": [
+            {
+              "dayOfWeek": 1,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 3,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 5,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            },
+            {
+              "dayOfWeek": 6,
+              "name": "Recupero Attivo",
+              "description": "Pedalata leggera per recupero",
+              "duration": 60,
+              "tss": 40,
+              "type": "recupero",
+              "intervals": [
+                {
+                  "type": "lavoro",
+                  "duration": 3600,
+                  "power": {
+                    "min": 112,
+                    "max": 150,
+                    "target": 131
+                  },
+                  "description": "Zona 1 facile (45-55% FTP)"
+                }
+              ],
+              "coachNotes": "Workout generato da protocollo Polarized Training"
+            }
+          ]
+        }
+      ],
+      "status": "approved",
+      "approvedBy": "coach_1",
+      "approvedAt": "2025-12-07T22:15:22.421Z",
+      "createdAt": "2025-12-07T22:15:22.439Z"
+    }
+  ],
+  "p_max": 990,
+  "map": 326,
+  "maxHR": 183,
+  "vlamax": 0.73,
+  "apr": 664,
+  "riderProfile": "SPRINTER"
+}

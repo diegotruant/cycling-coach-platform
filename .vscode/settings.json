@@ -1,0 +1,23 @@
+{
+  "python.defaultInterpreterPath": "c:\\Users\\Diego Truant\\.gemini\\antigravity\\playground\\spatial-cosmic\\cycling-coach-platform\\.locust_env\\Scripts\\python",
+  "github.copilot.chat.mcpServers": {
+    "mcp-locust": {
+      "command": "c:\\Users\\Diego Truant\\.gemini\\antigravity\\playground\\spatial-cosmic\\cycling-coach-platform\\.locust_env\\Scripts\\python",
+      "args": [
+        "-u",
+        "c:\\Users\\Diego Truant\\.cursor\\extensions\\locust.locust-vscode-extension-0.1.68-universal\\mcp\\server.py"
+      ],
+      "cwd": "${workspaceFolder}"
+    }
+  },
+  "github.copilot.experimental.mcpServers": {
+    "mcp-locust": {
+      "command": "c:\\Users\\Diego Truant\\.gemini\\antigravity\\playground\\spatial-cosmic\\cycling-coach-platform\\.locust_env\\Scripts\\python",
+      "args": [
+        "-u",
+        "c:\\Users\\Diego Truant\\.cursor\\extensions\\locust.locust-vscode-extension-0.1.68-universal\\mcp\\server.py"
+      ],
+      "cwd": "${workspaceFolder}"
+    }
+  }
+}
