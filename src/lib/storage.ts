@@ -4,13 +4,30 @@ import path from 'path';
 
 // --- PostgreSQL Configuration ---
 // --- PostgreSQL Configuration ---
-const pool = new Pool({
-    connectionString: process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/cycling_coach',
-    ssl: { rejectUnauthorized: false }, // Supabase requires SSL
-    max: 10,
-    idleTimeoutMillis: 30000,
-    connectionTimeoutMillis: 5000,
-});
+const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build';
+
+// Mock pool or real pool based on environment
+let pool: any;
+
+if (isBuildPhase) {
+    console.log('Build phase detected: Using mock DB pool to prevent connection errors.');
+    pool = {
+        query: async () => ({ rows: [] }),
+        connect: async () => ({
+            query: async () => ({ rows: [] }),
+            release: () => { }
+        }),
+        end: async () => { }
+    };
+} else {
+    pool = new Pool({
+        connectionString: process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/cycling_coach',
+        ssl: { rejectUnauthorized: false }, // Supabase requires SSL
+        max: 10,
+        idleTimeoutMillis: 30000,
+        connectionTimeoutMillis: 5000,
+    });
+}
 
 // --- Types (Keep existing interfaces) ---
 export interface AthleteConfig {
