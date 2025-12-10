@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
         // Update mesocycle with approval info
         const approvedMesocycle = {
             ...mesocycle,
-            status: 'approved',
+            status: 'APPROVED',
             approvedBy: coachId,
             approvedAt: new Date().toISOString(),
             coachNotes: coachNotes || mesocycle.coachNotes

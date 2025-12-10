@@ -150,7 +150,7 @@ export interface Mesocycle {
     weeklyStructure: WeekStructure[];
 
     // Status
-    status: 'pending_approval' | 'approved' | 'active' | 'completed' | 'cancelled';
+    status: 'PENDING_APPROVAL' | 'APPROVED' | 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
     approvedBy?: string;
     approvedAt?: string;
     coachNotes?: string;
