@@ -1,13 +1,9 @@
 'use server';
 
-import fs from 'fs/promises';
-import path from 'path';
 import { getAthlete, updateAthlete, AthleteConfig } from '@/lib/storage';
+import { uploadDocument as uploadToSupabase, downloadDocument } from '@/lib/supabase-storage';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { revalidatePath } from 'next/cache';
-
-const DATA_DIR = path.join(process.cwd(), 'data');
-const ATHLETES_DIR = path.join(DATA_DIR, 'Athletes');
 
 // Initialize Gemini
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
@@ -24,16 +20,13 @@ export async function uploadDocument(athleteId: string, formData: FormData) {
         const athlete = await getAthlete(athleteId);
         if (!athlete) throw new Error('Athlete not found');
 
-        // Create documents directory if not exists
-        const folderName = `${athlete.name.replace(/[^a-z0-9]/gi, '_')}_${athlete.id}`;
-        const docsDir = path.join(ATHLETES_DIR, folderName, 'documents');
-        await fs.mkdir(docsDir, { recursive: true });
+        // Generate filename
+        const ext = file.name.split('.').pop() || 'pdf';
+        const filename = `${type.toLowerCase()}_${Date.now()}.${ext}`;
 
-        // Save file
+        // Upload to Supabase Storage
         const buffer = Buffer.from(await file.arrayBuffer());
-        const filename = `${type.toLowerCase()}_${Date.now()}${path.extname(file.name)}`;
-        const filePath = path.join(docsDir, filename);
-        await fs.writeFile(filePath, buffer);
+        const { url, path: storagePath } = await uploadToSupabase(athleteId, type, buffer, filename);
 
         // Update athlete config
         const documents = athlete.documents || [];
@@ -42,8 +35,10 @@ export async function uploadDocument(athleteId: string, formData: FormData) {
         const newDocEntry = {
             type,
             status: 'UPLOADED' as const,
-            url: `/api/documents/${athleteId}/${filename}`, // We'll need an API route for serving
+            url,
+            storagePath, // Store the Supabase path for later retrieval
             uploadedAt: new Date().toISOString(),
+            filename: file.name // Original filename
         };
 
         if (existingDocIndex >= 0) {
@@ -56,10 +51,11 @@ export async function uploadDocument(athleteId: string, formData: FormData) {
 
         // If Medical Certificate, analyze it
         if (type === 'MEDICAL_CERTIFICATE') {
-            await analyzeMedicalCertificate(athleteId, filePath);
+            await analyzeMedicalCertificate(athleteId, storagePath);
         }
 
         revalidatePath('/athlete/onboarding');
+        revalidatePath(`/coach/athletes/${athleteId}`);
         return { success: true };
     } catch (error) {
         console.error('Upload error:', error);
@@ -67,7 +63,7 @@ export async function uploadDocument(athleteId: string, formData: FormData) {
     }
 }
 
-async function analyzeMedicalCertificate(athleteId: string, filePath: string) {
+async function analyzeMedicalCertificate(athleteId: string, storagePath: string) {
     try {
         if (!process.env.GEMINI_API_KEY) {
             console.warn('Skipping AI analysis: No API Key');
@@ -75,11 +71,17 @@ async function analyzeMedicalCertificate(athleteId: string, filePath: string) {
         }
 
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-        const fileContent = await fs.readFile(filePath);
+
+        // Download file from Supabase Storage
+        const fileContent = await downloadDocument(storagePath);
+        if (!fileContent) {
+            console.error('Failed to download document for analysis');
+            return;
+        }
 
         // Convert to base64
         const base64Data = fileContent.toString('base64');
-        const mimeType = path.extname(filePath) === '.pdf' ? 'application/pdf' : 'image/jpeg'; // Simplified
+        const mimeType = storagePath.endsWith('.pdf') ? 'application/pdf' : 'image/jpeg';
 
         const prompt = "Analyze this medical certificate. Extract the expiration date. Return ONLY the date in YYYY-MM-DD format. If no date found or invalid, return 'INVALID'.";
 
