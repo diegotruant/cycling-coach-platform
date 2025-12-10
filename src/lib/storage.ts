@@ -336,6 +336,12 @@ export async function updateAthlete(id: string, updates: Partial<AthleteConfig>)
             }
 
             for (const m of updates.mesocycles) {
+                const mesocycleId = m.id || `meso_${Date.now()}_${Math.random().toString(36).substring(7)}`;
+                const mesocycleName = m.name || 'Mesociclo';
+                const startDate = m.startDate || new Date().toISOString().split('T')[0];
+                const endDate = m.endDate || startDate;
+                const status = m.status || 'draft';
+
                 await client.query(`
                     INSERT INTO mesocycles (id, athlete_id, name, start_date, end_date, status, structure, created_at)
                     VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
@@ -346,7 +352,7 @@ export async function updateAthlete(id: string, updates: Partial<AthleteConfig>)
                         status = EXCLUDED.status,
                         structure = EXCLUDED.structure
                  `, [
-                    m.id, id, m.name, m.startDate, m.endDate, m.status, JSON.stringify(m.weeklyStructure || {}), m.createdAt || new Date()
+                    mesocycleId, id, mesocycleName, startDate, endDate, status, JSON.stringify(m.weeklyStructure || []), m.createdAt || new Date()
                 ]);
             }
         }
