@@ -1,7 +1,7 @@
 import { getAthlete, getAthleteDiary, getAthleteTrends } from "@/lib/storage";
 import { updateAthleteProfile, saveAndRecalculateCP } from "@/app/actions/athlete-profile";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Save, Activity, User as UserIcon, AlertTriangle, Calendar as CalendarIcon, LayoutDashboard, RefreshCw, TrendingUp } from "lucide-react";
+import { ArrowLeft, Save, Activity, User as UserIcon, AlertTriangle, Calendar as CalendarIcon, LayoutDashboard, RefreshCw, TrendingUp, FileText } from "lucide-react";
 import { recalculateMetricsAction } from '@/app/actions/metrics';
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -18,6 +18,7 @@ import { MesocycleGeneratorButton } from "@/components/periodization/mesocycle-g
 import { ArchiveAthleteButton } from "@/components/archive-athlete-button";
 import { GenerateReportButton } from '@/components/coach/generate-report-button';
 import { SyncActivitiesButton } from "@/components/coach/sync-activities-button";
+import { AthleteDocumentsView } from "@/components/coach/athlete-documents-view";
 
 export default async function AthleteProfilePage({ params }: { params: Promise<{ id: string }> }) {
     const { id: rawId } = await params;
@@ -103,6 +104,10 @@ export default async function AthleteProfilePage({ params }: { params: Promise<{
                     <TabsTrigger value="performance">
                         <TrendingUp className="mr-2 h-4 w-4" />
                         Performance
+                    </TabsTrigger>
+                    <TabsTrigger value="documents">
+                        <FileText className="mr-2 h-4 w-4" />
+                        Documenti
                     </TabsTrigger>
                 </TabsList>
 
@@ -381,6 +386,20 @@ export default async function AthleteProfilePage({ params }: { params: Promise<{
 
                 <TabsContent value="performance">
                     <PerformanceDashboard athlete={athlete} />
+                </TabsContent>
+
+                <TabsContent value="documents">
+                    <div className="rounded-xl border border-border bg-card p-6">
+                        <div className="flex items-center gap-2 text-lg font-semibold mb-6">
+                            <FileText className="h-5 w-5 text-primary" />
+                            <h3>Documenti Atleta</h3>
+                        </div>
+                        <AthleteDocumentsView
+                            documents={athlete.documents || []}
+                            athleteId={athlete.id}
+                            athleteName={athlete.name}
+                        />
+                    </div>
                 </TabsContent>
             </Tabs>
         </div>
