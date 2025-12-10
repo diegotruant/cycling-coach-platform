@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/button';
 
 import { AddAthleteDialog } from '@/components/add-athlete-dialog';
 
+export const dynamic = 'force-dynamic';
+
 export default async function AthletesListPage() {
     const athletes = await getAthletesWithStatus();
 

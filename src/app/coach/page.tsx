@@ -5,6 +5,8 @@ import { CoachStatsCard } from "@/components/coach/coach-stats-card";
 import { QuickActionsPanel } from "@/components/coach/quick-actions-panel";
 import Link from "next/link";
 
+export const dynamic = 'force-dynamic';
+
 export default async function CoachDashboard() {
     const overview = await getCoachOverview();
     const athletes = await getAthletesWithStatus();
