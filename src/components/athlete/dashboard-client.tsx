@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Activity, Zap, Battery, Calendar as CalendarIcon, CheckCircle2 } from 'lucide-react';
+import { Activity, Zap, Battery, Calendar as CalendarIcon, CheckCircle2, FileText } from 'lucide-react';
 import { TodaysWorkout } from '@/components/athlete/todays-workout';
 import { Notifications } from '@/components/athlete/notifications';
 import { cn } from '@/lib/utils';
@@ -80,6 +80,9 @@ export function AthleteDashboardClient({
                     </p>
                 </div>
                 <div className="flex gap-2">
+                    <a href="/athlete/documents" className="bg-muted text-muted-foreground h-9 w-9 rounded-full flex items-center justify-center hover:bg-accent transition-colors" title="I miei documenti">
+                        <FileText className="h-4 w-4" />
+                    </a>
                     <Notifications />
                     <a href="/athlete/recovery" className="bg-primary text-primary-foreground h-9 w-9 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
                         <Activity className="h-4 w-4" />
