@@ -5,6 +5,8 @@ import { modulateWorkout } from "@/core/workouts/modulators";
 import { WORKOUT_LIBRARY, WorkoutTemplate } from "@/core/workouts/library";
 import { AthleteDashboardClient } from "@/components/athlete/dashboard-client";
 
+export const dynamic = 'force-dynamic';
+
 export default async function AthleteDashboard() {
     const cookieStore = await cookies();
     const athleteId = cookieStore.get('athlete_session')?.value;
