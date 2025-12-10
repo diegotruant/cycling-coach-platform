@@ -56,6 +56,10 @@ export function AddAthleteDialog() {
                     <DialogTitle>Add New Athlete</DialogTitle>
                     <DialogDescription>
                         Enter the athlete's basic information to add them to your roster.
+                        <br />
+                        <span className="font-semibold text-xs text-muted-foreground mt-2 block">
+                            Note: Default password will be <code className="bg-muted px-1 py-0.5 rounded">123456</code>.
+                        </span>
                     </DialogDescription>
                 </DialogHeader>
                 <form action={handleSubmit}>

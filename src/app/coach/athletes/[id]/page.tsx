@@ -20,10 +20,13 @@ import { GenerateReportButton } from '@/components/coach/generate-report-button'
 import { SyncActivitiesButton } from "@/components/coach/sync-activities-button";
 
 export default async function AthleteProfilePage({ params }: { params: Promise<{ id: string }> }) {
-    const { id } = await params;
+    const { id: rawId } = await params;
+    const id = decodeURIComponent(rawId).trim();
+    console.log(`[AthleteProfilePage] Requesting athlete with ID: '${id}' (raw: '${rawId}')`);
     const athlete = await getAthlete(id);
 
     if (!athlete) {
+        console.log(`[AthleteProfilePage] Athlete not found for ID: ${id}`);
         notFound();
     }
 

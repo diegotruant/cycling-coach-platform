@@ -230,6 +230,7 @@ export async function addAthlete(formData: FormData) {
         id: crypto.randomUUID(),
         name,
         email,
+        password: '123456',
         onboardingCompleted: false,
         createdAt: new Date().toISOString(),
     } as any; // Cast to any to avoid strict type checking for optional fields if needed, though AthleteConfig has mostly optionals

@@ -211,11 +211,19 @@ async function getMesocyclesFromDB(athleteId: string) {
 
 export async function getAthlete(id: string): Promise<AthleteConfig | null> {
     const { rows } = await pool.query('SELECT * FROM athletes WHERE id = $1', [id]);
-    if (rows.length === 0) return null;
 
-    const athlete = mapAthleteRow(rows[0]);
-    athlete.assignments = await getAssignments(id);
-    athlete.mesocycles = await getMesocyclesFromDB(id);
+    let row = rows[0];
+    if (rows.length === 0) {
+        // Fallback: Try case-insensitive search to handle URL mismatch
+        const { rows: rows2 } = await pool.query('SELECT * FROM athletes WHERE LOWER(id) = LOWER($1)', [id]);
+        if (rows2.length === 0) return null;
+        row = rows2[0];
+    }
+
+    const athlete = mapAthleteRow(row);
+    // Use the potentially corrected ID from the database for related queries
+    athlete.assignments = await getAssignments(athlete.id);
+    athlete.mesocycles = await getMesocyclesFromDB(athlete.id);
 
     return athlete;
 }
