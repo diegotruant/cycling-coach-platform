@@ -20,9 +20,14 @@ export default function Home() {
         <h1 className="text-6xl font-bold tracking-tighter sm:text-7xl text-center">
           Serious <span className="text-primary">Sport</span>
         </h1>
-        <a href="/coach" className="rounded-full bg-primary px-8 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-primary/90">
-          Enter Coach Dashboard
-        </a>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link href="/coach" className="rounded-full bg-primary px-8 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-primary/90 text-center">
+            Coach Dashboard
+          </Link>
+          <Link href="/athlete/login" className="rounded-full bg-secondary px-8 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-secondary/90 text-center">
+            Athlete Login
+          </Link>
+        </div>
       </div>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left mt-20 gap-4">
