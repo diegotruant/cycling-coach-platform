@@ -87,24 +87,31 @@ function getStatusInfo(doc: Document) {
 export function AthleteDocumentsView({ documents, athleteId, athleteName }: AthleteDocumentsViewProps) {
     const requiredTypes = ['MEDICAL_CERTIFICATE', 'QUESTIONNAIRE', 'ANAMNESIS', 'ETHICS'];
 
+    // Safe documents array
+    const safeDocuments = Array.isArray(documents) ? documents.filter(d => d && typeof d === 'object') : [];
+
     // Check for missing or expired documents
     const issues: string[] = [];
 
-    const medCert = documents.find(d => d.type === 'MEDICAL_CERTIFICATE');
+    const medCert = safeDocuments.find(d => d.type === 'MEDICAL_CERTIFICATE');
     if (!medCert) {
         issues.push('Certificato medico mancante');
     } else if (medCert.status === 'EXPIRED' || (medCert.expirationDate && new Date(medCert.expirationDate) < new Date())) {
         issues.push('Certificato medico scaduto');
     } else if (medCert.expirationDate) {
-        const expDate = new Date(medCert.expirationDate);
-        const warningDate = new Date();
-        warningDate.setDate(warningDate.getDate() + 30);
-        if (expDate < warningDate) {
-            issues.push(`Certificato medico in scadenza (${expDate.toLocaleDateString('it-IT')})`);
+        try {
+            const expDate = new Date(medCert.expirationDate);
+            const warningDate = new Date();
+            warningDate.setDate(warningDate.getDate() + 30);
+            if (expDate < warningDate) {
+                issues.push(`Certificato medico in scadenza (${expDate.toLocaleDateString('it-IT')})`);
+            }
+        } catch (e) {
+            // Ignore invalid dates
         }
     }
 
-    const missingDocs = requiredTypes.filter(type => !documents.find(d => d.type === type));
+    const missingDocs = requiredTypes.filter(type => !safeDocuments.find(d => d.type === type));
     if (missingDocs.length > 0 && missingDocs.length < 4) {
         issues.push(`${missingDocs.length} documento/i mancante/i`);
     }
@@ -133,7 +140,7 @@ export function AthleteDocumentsView({ documents, athleteId, athleteName }: Athl
             {/* Documents Grid */}
             <div className="grid gap-4 md:grid-cols-2">
                 {requiredTypes.map(type => {
-                    const doc = documents.find(d => d.type === type);
+                    const doc = safeDocuments.find(d => d.type === type);
                     const label = DOCUMENT_LABELS[type] || type;
 
                     if (!doc) {
@@ -155,6 +162,10 @@ export function AthleteDocumentsView({ documents, athleteId, athleteName }: Athl
                     const statusInfo = getStatusInfo(doc);
                     const StatusIcon = statusInfo.icon;
 
+                    // Safely handle dates
+                    const uploadedAtStr = doc.uploadedAt ? new Date(doc.uploadedAt).toLocaleDateString('it-IT') : null;
+                    const expirationStr = doc.expirationDate ? new Date(doc.expirationDate).toLocaleDateString('it-IT') : null;
+
                     return (
                         <div key={type} className="rounded-lg border border-border bg-card p-4">
                             <div className="flex items-start gap-3">
@@ -168,14 +179,14 @@ export function AthleteDocumentsView({ documents, athleteId, athleteName }: Athl
                                             {statusInfo.label}
                                         </span>
                                     </div>
-                                    {doc.uploadedAt && (
+                                    {uploadedAtStr && (
                                         <p className="text-xs text-muted-foreground mt-1">
-                                            Caricato: {new Date(doc.uploadedAt).toLocaleDateString('it-IT')}
+                                            Caricato: {uploadedAtStr}
                                         </p>
                                     )}
-                                    {doc.expirationDate && (
+                                    {expirationStr && (
                                         <p className="text-xs text-muted-foreground">
-                                            Scadenza: {new Date(doc.expirationDate).toLocaleDateString('it-IT')}
+                                            Scadenza: {expirationStr}
                                         </p>
                                     )}
                                 </div>
@@ -201,7 +212,7 @@ export function AthleteDocumentsView({ documents, athleteId, athleteName }: Athl
             {/* Summary */}
             <div className="text-sm text-muted-foreground">
                 <p>
-                    Documenti completi: {documents.length}/{requiredTypes.length}
+                    Documenti completi: {safeDocuments.length}/{requiredTypes.length}
                 </p>
             </div>
         </div>
