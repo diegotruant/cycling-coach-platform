@@ -30,6 +30,9 @@ export default function AthleteLayout({
                         <Link className="mr-6 flex items-center space-x-2" href="/athlete/profile">
                             <span className="hidden font-bold sm:inline-block">Profile</span>
                         </Link>
+                        <Link className="mr-6 flex items-center space-x-2" href="/athlete/documents">
+                            <span className="hidden font-bold sm:inline-block">Documenti</span>
+                        </Link>
                         <Link className="mr-6 flex items-center space-x-2" href="/athlete/recovery">
                             <span className="hidden font-bold sm:inline-block">Recovery</span>
                         </Link>
