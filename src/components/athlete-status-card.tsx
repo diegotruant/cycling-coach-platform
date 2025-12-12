@@ -1,6 +1,17 @@
 import Link from 'next/link';
-import { AthleteWithStatus } from '@/app/actions/coach-actions';
-import { Heart, TrendingUp, TrendingDown, Minus, AlertTriangle } from 'lucide-react';
+import { AthleteWithStatus, deleteAthleteAction } from '@/app/actions/coach-actions';
+import { Heart, TrendingUp, TrendingDown, Minus, AlertTriangle, Trash2 } from 'lucide-react';
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Button } from './ui/button';
 
 interface AthleteStatusCardProps {
@@ -39,10 +50,10 @@ export default function AthleteStatusCard({ athlete }: AthleteStatusCardProps) {
 
     return (
         <div className={`relative rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md ${athlete.overreachingStatus === 'NFOR' || athlete.hrvStatus === 'RED'
-                ? 'border-red-500/30 bg-red-500/5'
-                : athlete.hrvStatus === 'YELLOW'
-                    ? 'border-orange-500/20'
-                    : 'border-border'
+            ? 'border-red-500/30 bg-red-500/5'
+            : athlete.hrvStatus === 'YELLOW'
+                ? 'border-orange-500/20'
+                : 'border-border'
             }`}>
             {/* NFOR Badge */}
             {athlete.overreachingStatus === 'NFOR' && getHRVBadge()}
@@ -85,8 +96,8 @@ export default function AthleteStatusCard({ athlete }: AthleteStatusCardProps) {
                         <span className="text-sm text-muted-foreground">ms</span>
                         {athlete.hrvDeviation !== undefined && (
                             <span className={`text-sm font-semibold ${athlete.hrvDeviation > 0 ? 'text-green-500' :
-                                    athlete.hrvDeviation < 0 ? 'text-red-500' :
-                                        'text-gray-500'
+                                athlete.hrvDeviation < 0 ? 'text-red-500' :
+                                    'text-gray-500'
                                 }`}>
                                 {athlete.hrvDeviation > 0 ? '+' : ''}{athlete.hrvDeviation}%
                             </span>
@@ -136,6 +147,32 @@ export default function AthleteStatusCard({ athlete }: AthleteStatusCardProps) {
                         Recovery
                     </Button>
                 </Link>
+
+                <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                        <Button variant="destructive" size="icon" className="h-9 w-9">
+                            <Trash2 className="h-4 w-4" />
+                        </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                        <AlertDialogHeader>
+                            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                            <AlertDialogDescription>
+                                This action cannot be undone. This will permanently delete
+                                <strong> {athlete.name}</strong> and remove all their data from the database.
+                            </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                            <AlertDialogCancel>Cancel</AlertDialogCancel>
+                            <AlertDialogAction
+                                onClick={async () => await deleteAthleteAction(athlete.id)}
+                                className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                            >
+                                Delete
+                            </AlertDialogAction>
+                        </AlertDialogFooter>
+                    </AlertDialogContent>
+                </AlertDialog>
             </div>
         </div>
     );

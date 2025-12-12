@@ -1,6 +1,6 @@
 'use server';
 
-import { getAthletes, createAthlete, AthleteConfig } from '@/lib/storage';
+import { getAthletes, createAthlete, deleteAthlete, AthleteConfig } from '@/lib/storage';
 import { revalidatePath } from 'next/cache';
 import { getRecoveryEntries } from './recovery';
 import { getTestResults } from './test-results';
@@ -237,6 +237,16 @@ export async function addAthlete(formData: FormData) {
 
     await createAthlete(newAthlete);
     revalidatePath('/coach/athletes');
+}
+
+export async function deleteAthleteAction(athleteId: string) {
+    try {
+        await deleteAthlete(athleteId);
+        revalidatePath('/coach/athletes');
+    } catch (error) {
+        console.error('Failed to delete athlete:', error);
+        throw new Error('Failed to delete athlete');
+    }
 }
 
 export async function archiveAthlete(athleteId: string): Promise<string> {

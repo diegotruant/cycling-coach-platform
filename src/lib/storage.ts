@@ -247,6 +247,29 @@ export async function createAthlete(athlete: AthleteConfig): Promise<void> {
     ]);
 }
 
+export async function deleteAthlete(id: string): Promise<void> {
+    const client = await pool.connect();
+    try {
+        await client.query('BEGIN');
+
+        // Delete related data first (though CASCADE on foreign keys usually handles this, we do it explicitly to be safe if FKs are missing)
+        await client.query('DELETE FROM diary_entries WHERE athlete_id = $1', [id]);
+        await client.query('DELETE FROM reports WHERE athlete_id = $1', [id]);
+        await client.query('DELETE FROM assignments WHERE athlete_id = $1', [id]);
+        await client.query('DELETE FROM mesocycles WHERE athlete_id = $1', [id]);
+
+        // Delete the athlete
+        await client.query('DELETE FROM athletes WHERE id = $1', [id]);
+
+        await client.query('COMMIT');
+    } catch (e) {
+        await client.query('ROLLBACK');
+        throw e;
+    } finally {
+        client.release();
+    }
+}
+
 export async function updateAthlete(id: string, updates: Partial<AthleteConfig>): Promise<void> {
     const client = await pool.connect();
     try {
