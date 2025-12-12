@@ -20,8 +20,15 @@ import { GenerateReportButton } from '@/components/coach/generate-report-button'
 import { SyncActivitiesButton } from "@/components/coach/sync-activities-button";
 import { AthleteDocumentsView } from "@/components/coach/athlete-documents-view";
 
-export default async function AthleteProfilePage({ params }: { params: Promise<{ id: string }> }) {
+export default async function AthleteProfilePage({
+    params,
+    searchParams
+}: {
+    params: Promise<{ id: string }>,
+    searchParams: Promise<{ tab?: string }>
+}) {
     const { id: rawId } = await params;
+    const { tab } = await searchParams;
     const id = decodeURIComponent(rawId).trim();
     console.log(`[AthleteProfilePage] Requesting athlete with ID: '${id}' (raw: '${rawId}')`);
     const athlete = await getAthlete(id);
@@ -67,6 +74,7 @@ export default async function AthleteProfilePage({ params }: { params: Promise<{
     }));
 
     const updateAction = updateAthleteProfile.bind(null, athlete.id);
+    const activeTab = tab || "overview";
 
     return (
         <div className="space-y-6">
@@ -91,7 +99,7 @@ export default async function AthleteProfilePage({ params }: { params: Promise<{
                 </div>
             </div>
 
-            <Tabs key="athlete-profile-tabs" defaultValue="overview" className="space-y-4">
+            <Tabs key="athlete-profile-tabs" defaultValue={activeTab} className="space-y-4">
                 <TabsList>
                     <TabsTrigger value="overview">
                         <LayoutDashboard className="mr-2 h-4 w-4" />
