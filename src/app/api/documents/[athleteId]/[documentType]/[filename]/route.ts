@@ -18,12 +18,14 @@ export async function GET(
         }
 
         const storagePath = `${athleteId}/${documentType}/${filename}`;
+        console.log(`[API Debug] Attempting to download: ${storagePath} for athlete: ${athleteId}`);
 
         // Download file from Supabase Storage
         const fileBuffer = await downloadDocument(storagePath);
 
         if (!fileBuffer) {
-            return new NextResponse("File not found", { status: 404 });
+            console.error(`[API Error] File not found in storage: ${storagePath}`);
+            return new NextResponse(`File not found: ${storagePath}`, { status: 404 });
         }
 
         const ext = filename.toLowerCase().split('.').pop();
@@ -32,7 +34,7 @@ export async function GET(
         if (ext === 'jpg' || ext === 'jpeg') contentType = 'image/jpeg';
         if (ext === 'png') contentType = 'image/png';
 
-        return new NextResponse(fileBuffer, {
+        return new NextResponse(fileBuffer as any, {
             headers: {
                 'Content-Type': contentType,
                 'Content-Disposition': `inline; filename="${filename}"`
