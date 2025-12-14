@@ -10,6 +10,7 @@ interface Document {
     type: string;
     status: string;
     url?: string;
+    fileUrl?: string; // Support new property
     uploadedAt?: string;
     expirationDate?: string;
     filename?: string;
@@ -199,9 +200,9 @@ export default async function AthleteDocumentsPage() {
 
                                 {/* Actions */}
                                 <div className="flex flex-col gap-2 lg:w-64">
-                                    {doc && doc.url && (
+                                    {doc && (doc.url || doc.fileUrl) && (
                                         <a
-                                            href={doc.url}
+                                            href={doc.fileUrl || doc.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-border bg-background hover:bg-accent transition-colors"

@@ -7,6 +7,7 @@ interface Document {
     type: string;
     status: string;
     url?: string;
+    fileUrl?: string;
     storagePath?: string;
     uploadedAt?: string;
     expirationDate?: string;
@@ -190,9 +191,9 @@ export function AthleteDocumentsView({ documents, athleteId, athleteName }: Athl
                                         </p>
                                     )}
                                 </div>
-                                {doc.url && (
+                                {doc.fileUrl || doc.url ? (
                                     <a
-                                        href={doc.url}
+                                        href={doc.fileUrl || doc.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="shrink-0"
@@ -202,7 +203,7 @@ export function AthleteDocumentsView({ documents, athleteId, athleteName }: Athl
                                             Apri
                                         </Button>
                                     </a>
-                                )}
+                                ) : null}
                             </div>
                         </div>
                     );

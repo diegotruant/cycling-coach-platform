@@ -1,6 +1,6 @@
 'use server';
 
-import { getAthlete, updateAthlete, AthleteConfig } from '@/lib/storage';
+import { getAthlete, updateAthlete, saveDocument, AthleteConfig } from '@/lib/storage';
 import { uploadDocument as uploadToSupabase, downloadDocument } from '@/lib/supabase-storage';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { revalidatePath } from 'next/cache';
@@ -28,33 +28,24 @@ export async function uploadDocument(athleteId: string, formData: FormData) {
         const buffer = Buffer.from(await file.arrayBuffer());
         const { url, path: storagePath } = await uploadToSupabase(athleteId, type, buffer, filename);
 
-        // Update athlete config
-        const documents = athlete.documents || [];
-        const existingDocIndex = documents.findIndex(d => d.type === type);
-
-        const newDocEntry = {
+        // Save to Database (New Table)
+        await saveDocument(athleteId, {
             type,
-            status: 'UPLOADED' as const,
-            url,
-            storagePath, // Store the Supabase path for later retrieval
+            status: 'UPLOADED',
+            fileUrl: url,
+            storagePath,
             uploadedAt: new Date().toISOString(),
-            filename: file.name // Original filename
-        };
-
-        if (existingDocIndex >= 0) {
-            documents[existingDocIndex] = { ...documents[existingDocIndex], ...newDocEntry };
-        } else {
-            documents.push(newDocEntry);
-        }
-
-        await updateAthlete(athleteId, { documents });
+            metadata: { filename: file.name, size: file.size, mimeType: file.type }
+        });
 
         // If Medical Certificate, analyze it
         if (type === 'MEDICAL_CERTIFICATE') {
+            // Run async to not block UI? No, usually server actions await.
+            // We can await it.
             await analyzeMedicalCertificate(athleteId, storagePath);
         }
 
-        revalidatePath('/athlete/onboarding');
+        revalidatePath('/athlete/documents');
         revalidatePath(`/coach/athletes/${athleteId}`);
         return { success: true };
     } catch (error) {
@@ -123,16 +114,25 @@ async function analyzeMedicalCertificate(athleteId: string, storagePath: string)
             }
         }
 
-        // Update athlete config with analysis result
+        // Update DB
+        // We need to find the document ID to update, OR simple update by type + athleteId (handled by saveDocument helper I wrote?)
+        // saveDocument uses ID if provided, or insert.
+        // I need to update my saveDocument or write a raw query here to update by type? 
+        // Or get the doc first.
+
+        // Let's first get the list to find the ID of the cert we just uploaded.
+        // Actually, documents are unique by type usually? No, could have history.
+        // We want to update the MOST RECENT one.
         const athlete = await getAthlete(athleteId);
-        if (athlete && athlete.documents) {
-            const docs = athlete.documents.map(d => {
-                if (d.type === 'MEDICAL_CERTIFICATE') {
-                    return { ...d, status, expirationDate };
-                }
-                return d;
+        const latestCert = athlete?.documents?.find(d => d.type === 'MEDICAL_CERTIFICATE' && d.storagePath === storagePath);
+
+        if (latestCert) {
+            await saveDocument(athleteId, {
+                id: latestCert.id,
+                status,
+                expirationDate: expirationDate || undefined,
+                type: 'MEDICAL_CERTIFICATE' // Required by partial
             });
-            await updateAthlete(athleteId, { documents: docs });
         }
 
     } catch (error) {
