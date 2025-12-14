@@ -20,6 +20,8 @@ export default async function ProtectedAthleteLayout({
     const headersList = await headers();
     const pathname = headersList.get('x-pathname') || '';
 
+    console.log('Protected Layout Pathname Check:', { pathname, completed: status.completed });
+
     // If documents are missing/invalid, block access to everything except the documents page
     if (!status.completed) {
         if (!pathname.includes('/athlete/documents')) {
@@ -31,8 +33,8 @@ export default async function ProtectedAthleteLayout({
     }
 
     return (
-        <>
+        <div className="flex flex-col min-h-[50vh]">
             {children}
-        </>
+        </div>
     );
 }
