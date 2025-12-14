@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getAthlete } from "@/lib/storage";
-import { downloadDocument, getDocumentSignedUrl } from "@/lib/supabase-storage";
+import { getDocumentSignedUrl } from "@/lib/supabase-storage";
 
 export async function GET(
     request: NextRequest,
@@ -18,28 +18,18 @@ export async function GET(
         }
 
         const storagePath = `${athleteId}/${documentType}/${filename}`;
-        console.log(`[API Debug] Attempting to download: ${storagePath} for athlete: ${athleteId}`);
+        console.log(`[API Debug] Generating signed URL for: ${storagePath}`);
 
-        // Download file from Supabase Storage
-        const fileBuffer = await downloadDocument(storagePath);
+        // Generate signed URL instead of downloading
+        const signedUrl = await getDocumentSignedUrl(storagePath);
 
-        if (!fileBuffer) {
-            console.error(`[API Error] File not found in storage: ${storagePath}`);
-            return new NextResponse(`File not found: ${storagePath}`, { status: 404 });
+        if (!signedUrl) {
+            console.error(`[API Error] Failed to generate signed URL for: ${storagePath}`);
+            return new NextResponse("File not found or access denied", { status: 404 });
         }
 
-        const ext = filename.toLowerCase().split('.').pop();
-        let contentType = 'application/octet-stream';
-        if (ext === 'pdf') contentType = 'application/pdf';
-        if (ext === 'jpg' || ext === 'jpeg') contentType = 'image/jpeg';
-        if (ext === 'png') contentType = 'image/png';
-
-        return new NextResponse(fileBuffer as any, {
-            headers: {
-                'Content-Type': contentType,
-                'Content-Disposition': `inline; filename="${filename}"`
-            }
-        });
+        // Redirect to the signed URL
+        return NextResponse.redirect(signedUrl);
 
     } catch (error) {
         console.error("Error serving document:", error);
