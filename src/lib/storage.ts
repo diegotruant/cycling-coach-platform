@@ -596,7 +596,7 @@ export async function getAthleteDocuments(athleteId: string): Promise<AthleteDoc
         id: row.id,
         athleteId: row.athlete_id,
         type: row.type,
-        fileUrl: row.file_url,
+        fileUrl: row.file_url || `/api/documents/${row.storage_path}`,
         storagePath: row.storage_path,
         status: row.status,
         expirationDate: row.expiration_date ? (row.expiration_date instanceof Date ? row.expiration_date.toISOString().split('T')[0] : row.expiration_date) : undefined,
