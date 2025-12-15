@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import { uploadDocument } from '@/app/actions/onboarding';
 import { Button } from '@/components/ui/button';
 import { Upload, Loader2, Check, RefreshCw } from 'lucide-react';
@@ -24,6 +25,7 @@ export default function UploadDocumentForm({
     buttonText,
     buttonVariant = 'default'
 }: UploadDocumentFormProps) {
+    const router = useRouter();
     const [uploading, setUploading] = useState(false);
     const [success, setSuccess] = useState(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
@@ -41,6 +43,7 @@ export default function UploadDocumentForm({
         setUploading(false);
         if (result.success) {
             setSuccess(true);
+            router.refresh();
             // Reset after 3 seconds
             setTimeout(() => setSuccess(false), 3000);
         } else {

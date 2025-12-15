@@ -28,23 +28,7 @@ export async function GET(
             return new NextResponse("File not found or access denied", { status: 404 });
         }
 
-        // DEBUG: Return JSON to verify URL generation and Env Vars
-        return NextResponse.json({
-            status: 'ok',
-            signedUrl,
-            debug: {
-                athleteId,
-                documentType,
-                filename,
-                storagePath,
-                envParams: {
-                    hasServiceKey: !!process.env.SUPABASE_SERVICE_ROLE_KEY,
-                    serviceKeyLength: process.env.SUPABASE_SERVICE_ROLE_KEY?.length
-                }
-            }
-        });
-
-        // return NextResponse.redirect(signedUrl);
+        return NextResponse.redirect(signedUrl);
 
     } catch (error) {
         console.error("Error serving document:", error);
