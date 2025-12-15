@@ -21,6 +21,21 @@ async function checkDocs() {
         return;
     }
 
+    // Check if athlete exists
+    console.log('Checking athlete "omar"...');
+    // We need to import getAthlete. But since it's in @/lib/storage and uses 'pg', we can just query directly here to keep script simple
+    const { data: athlete, error: athleteError } = await supabase
+        .from('athletes')
+        .select('*')
+        .or(`id.eq.omar,name.ilike.omar`) // Try ID or Name
+        .single();
+
+    if (athleteError) {
+        console.error('Error finding athlete:', athleteError);
+    } else {
+        console.log('Athlete found:', athlete?.id);
+    }
+
     console.log('Documents found:', data?.length);
     if (data) {
         data.forEach(d => {

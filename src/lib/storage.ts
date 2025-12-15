@@ -217,6 +217,7 @@ async function getMesocyclesFromDB(athleteId: string) {
     }));
 }
 
+
 export async function getAthlete(id: string): Promise<AthleteConfig | null> {
     const { rows } = await pool.query('SELECT * FROM athletes WHERE id = $1', [id]);
 
@@ -230,6 +231,24 @@ export async function getAthlete(id: string): Promise<AthleteConfig | null> {
 
     const athlete = mapAthleteRow(row);
     // Use the potentially corrected ID from the database for related queries
+    athlete.assignments = await getAssignments(athlete.id);
+    athlete.mesocycles = await getMesocyclesFromDB(athlete.id);
+    athlete.documents = await getAthleteDocuments(athlete.id);
+
+    return athlete;
+}
+
+export async function getCoachByEmail(email: string): Promise<{ id: string, name: string, email: string } | null> {
+    const { rows } = await pool.query('SELECT * FROM coaches WHERE email = $1', [email]);
+    if (rows.length === 0) return null;
+    return rows[0];
+}
+
+export async function getAthleteByEmail(email: string): Promise<AthleteConfig | null> {
+    const { rows } = await pool.query('SELECT * FROM athletes WHERE email = $1', [email]);
+    if (rows.length === 0) return null;
+
+    const athlete = mapAthleteRow(rows[0]);
     athlete.assignments = await getAssignments(athlete.id);
     athlete.mesocycles = await getMesocyclesFromDB(athlete.id);
     athlete.documents = await getAthleteDocuments(athlete.id);

@@ -10,6 +10,7 @@
     "backup": "tsx src/scripts/backup.ts"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.36.3",
     "@google/generative-ai": "^0.24.1",
     "@prisma/client": "^7.0.1",
     "@radix-ui/react-alert-dialog": "^1.1.15",

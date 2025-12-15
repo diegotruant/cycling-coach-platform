@@ -12,9 +12,7 @@ const nextConfig: NextConfig = {
       bodySizeLimit: '10mb', // Increased for document and FIT file uploads
     },
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+
   typescript: {
     ignoreBuildErrors: true,
   },

@@ -1,18 +1,26 @@
-import { cookies, headers } from "next/headers";
+import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { checkOnboardingStatus } from "@/app/actions/onboarding";
+import { getCurrentAthlete } from "@/lib/auth-helpers";
+
+import { currentUser } from "@clerk/nextjs/server";
 
 export default async function ProtectedAthleteLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
-    const cookieStore = await cookies();
-    const athleteId = cookieStore.get('athlete_session')?.value;
-
-    if (!athleteId) {
-        redirect('/login');
+    const user = await currentUser();
+    if (!user) {
+        redirect('/athlete/login');
     }
+
+    const athlete = await getCurrentAthlete();
+
+    if (!athlete) {
+        redirect('/athlete/unauthorized');
+    }
+    const athleteId = athlete.id;
 
     const status = await checkOnboardingStatus(athleteId);
 
@@ -27,9 +35,6 @@ export default async function ProtectedAthleteLayout({
         if (!pathname.includes('/athlete/documents')) {
             redirect('/athlete/documents');
         }
-    } else {
-        // If completed, but user tries to go to onboarding (if usage exists), maybe redirect to dashboard?
-        // Optional, but for now we just enforce the BLOCKING.
     }
 
     return (

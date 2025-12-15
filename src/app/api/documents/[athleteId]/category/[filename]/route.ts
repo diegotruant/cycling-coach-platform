@@ -18,7 +18,6 @@ export async function GET(
         }
 
         const storagePath = `${athleteId}/${documentType}/${filename}`;
-        console.log(`[API Debug] Generating signed URL for: ${storagePath}`);
 
         // Generate signed URL instead of downloading
         const signedUrl = await getDocumentSignedUrl(storagePath);
@@ -28,7 +27,14 @@ export async function GET(
             return new NextResponse("File not found or access denied", { status: 404 });
         }
 
-        return NextResponse.redirect(signedUrl);
+        return NextResponse.redirect(signedUrl, {
+            status: 302,
+            headers: {
+                'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+                'Pragma': 'no-cache',
+                'Expires': '0',
+            }
+        });
 
     } catch (error) {
         console.error("Error serving document:", error);

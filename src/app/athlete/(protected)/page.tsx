@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { getAthlete, getAthleteDiary, getAthleteTrends, getActiveMesocycle, getTodaysWorkout } from "@/lib/storage";
+import { getAthleteDiary, getAthleteTrends, getActiveMesocycle, getTodaysWorkout } from "@/lib/storage";
 import { getDailyAdjustment } from "@/core/planner/adaptive_logic";
 import { modulateWorkout } from "@/core/workouts/modulators";
 import { WORKOUT_LIBRARY, WorkoutTemplate } from "@/core/workouts/library";
@@ -7,18 +7,15 @@ import { AthleteDashboardClient } from "@/components/athlete/dashboard-client";
 
 export const dynamic = 'force-dynamic';
 
+import { getCurrentAthlete } from "@/lib/auth-helpers";
+
 export default async function AthleteDashboard() {
-    const cookieStore = await cookies();
-    const athleteId = cookieStore.get('athlete_session')?.value;
+    const athlete = await getCurrentAthlete();
 
-    if (!athleteId) {
-        return <div>Not logged in</div>;
-    }
-
-    const athlete = await getAthlete(athleteId);
     if (!athlete) {
-        return <div>Athlete not found</div>;
+        return <div>Not logged in or Athlete not found associated with this email.</div>;
     }
+    const athleteId = athlete.id;
 
     // 1. Fetch Data
     const diary = await getAthleteDiary(athleteId);
