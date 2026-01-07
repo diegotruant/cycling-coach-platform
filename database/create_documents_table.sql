@@ -1,4 +1,4 @@
--- Create the athlete_documents table
+c-- Create the athlete_documents table
 CREATE TABLE IF NOT EXISTS athlete_documents (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     athlete_id TEXT NOT NULL REFERENCES athletes(id) ON DELETE CASCADE,

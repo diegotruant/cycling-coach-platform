@@ -84,7 +84,7 @@ export default async function OnboardingPage() {
 
                                 <UploadDocumentForm
                                     athleteId={athleteId}
-                                    type={step.id}
+                                    documentType={step.id}
                                     isUploaded={isUploaded && !isRejected}
                                 />
                             </CardContent>

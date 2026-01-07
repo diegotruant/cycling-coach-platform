@@ -64,7 +64,7 @@ export class MesocycleGenerator {
             },
             analysis,
             weeklyStructure,
-            status: 'pending_approval'
+            status: 'PENDING_APPROVAL'
         };
 
         return mesocycle;

@@ -1,25 +1,20 @@
-import { currentUser } from "@clerk/nextjs/server";
-import { getAthleteByEmail, AthleteConfig } from "@/lib/storage";
+import { createClient } from "@/lib/supabase/server";
+import { getAthleteByEmail, AthleteConfig, getCoachByEmail } from "@/lib/storage";
 
 export async function getCurrentAthlete(): Promise<AthleteConfig | null> {
-    const user = await currentUser();
-    if (!user) return null;
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
 
-    // Use the primary email address to look up the athlete
-    const email = user.emailAddresses.find(e => e.id === user.primaryEmailAddressId)?.emailAddress;
-    if (!email) return null;
+    if (!user || !user.email) return null;
 
-    return getAthleteByEmail(email);
+    return getAthleteByEmail(user.email);
 }
 
-import { getCoachByEmail } from "@/lib/storage";
-
 export async function getCurrentCoach() {
-    const user = await currentUser();
-    if (!user) return null;
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
 
-    const email = user.emailAddresses.find(e => e.id === user.primaryEmailAddressId)?.emailAddress;
-    if (!email) return null;
+    if (!user || !user.email) return null;
 
-    return getCoachByEmail(email);
+    return getCoachByEmail(user.email);
 }

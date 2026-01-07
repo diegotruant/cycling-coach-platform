@@ -1,5 +1,7 @@
-import { SignOutButton } from "@clerk/nextjs";
+import { LogoutButton } from "@/components/auth/logout-button";
 import Link from "next/link";
+
+export const dynamic = 'force-dynamic';
 
 export default function UnauthorizedCoachPage() {
     return (
@@ -11,11 +13,9 @@ export default function UnauthorizedCoachPage() {
                     Contatta l'amministratore del sistema.
                 </p>
                 <div className="space-y-4">
-                    <SignOutButton>
-                        <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded transition">
-                            Disconnetti
-                        </button>
-                    </SignOutButton>
+                    <LogoutButton className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded transition">
+                        Disconnetti
+                    </LogoutButton>
                     <Link href="/" className="block text-blue-500 hover:underline">
                         Torna alla Home
                     </Link>

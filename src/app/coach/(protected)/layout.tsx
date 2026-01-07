@@ -2,7 +2,6 @@ import { Sidebar } from "@/components/layout/Sidebar";
 import { Header } from "@/components/layout/Header";
 
 import { redirect } from "next/navigation";
-import { currentUser } from "@clerk/nextjs/server";
 import { getCurrentCoach } from "@/lib/auth-helpers";
 
 export default async function CoachLayout({
@@ -10,14 +9,12 @@ export default async function CoachLayout({
 }: {
     children: React.ReactNode;
 }) {
-    const user = await currentUser();
-    if (!user) {
-        redirect('/coach/login');
-    }
-
+    // Auth check is handled by middleware, but we double check here for data availability
     const coach = await getCurrentCoach();
     if (!coach) {
-        redirect('/coach/unauthorized');
+        // If logged in but not a coach, redirect to unauthorized or login
+        // Middleware should have caught unauthenticated users
+        redirect('/login');
     }
     return (
         <div className="flex h-screen overflow-hidden bg-background">

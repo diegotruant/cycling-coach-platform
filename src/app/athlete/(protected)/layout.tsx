@@ -3,22 +3,16 @@ import { redirect } from "next/navigation";
 import { checkOnboardingStatus } from "@/app/actions/onboarding";
 import { getCurrentAthlete } from "@/lib/auth-helpers";
 
-import { currentUser } from "@clerk/nextjs/server";
-
 export default async function ProtectedAthleteLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
-    const user = await currentUser();
-    if (!user) {
-        redirect('/athlete/login');
-    }
-
+    // Auth check handled by middleware
     const athlete = await getCurrentAthlete();
 
     if (!athlete) {
-        redirect('/athlete/unauthorized');
+        redirect('/login');
     }
     const athleteId = athlete.id;
 

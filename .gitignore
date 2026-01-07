@@ -45,3 +45,5 @@ next-env.d.ts
 # python env
 .locust_env/
 
+
+.vercel

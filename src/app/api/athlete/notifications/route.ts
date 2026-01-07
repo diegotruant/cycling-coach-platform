@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
         const notifications = [];
 
         // Check for new mesocycle
-        const activeMesocycle = athlete.mesocycles?.find(m => m.status === 'active');
+        const activeMesocycle = athlete.mesocycles?.find(m => m.status === 'ACTIVE');
         if (activeMesocycle) {
             const startDate = new Date(activeMesocycle.startDate);
             const now = new Date();

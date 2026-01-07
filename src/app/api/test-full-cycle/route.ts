@@ -40,9 +40,9 @@ export async function GET() {
         await updateAthlete(testId, {
             onboardingCompleted: true,
             documents: [
-                { type: "QUESTIONNAIRE", status: "VERIFIED", uploadedAt: new Date().toISOString() },
-                { type: "ANAMNESIS", status: "VERIFIED", uploadedAt: new Date().toISOString() },
-                { type: "ETHICS", status: "VERIFIED", uploadedAt: new Date().toISOString() }
+                { id: 'doc_1', athleteId: testId, type: "QUESTIONNAIRE", status: "VERIFIED", uploadedAt: new Date().toISOString() },
+                { id: 'doc_2', athleteId: testId, type: "ANAMNESIS", status: "VERIFIED", uploadedAt: new Date().toISOString() },
+                { id: 'doc_3', athleteId: testId, type: "ETHICS", status: "VERIFIED", uploadedAt: new Date().toISOString() }
             ]
         });
         log("   - Onboarding completed. Documents verified.");

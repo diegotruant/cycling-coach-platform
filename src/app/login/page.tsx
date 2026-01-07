@@ -7,50 +7,51 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { useToast } from '@/components/ui/use-toast'
 import Link from 'next/link'
 
 export const dynamic = 'force-dynamic'
 
-export default function SignUpPage() {
+export default function LoginPage() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [fullName, setFullName] = useState('')
-    const [role, setRole] = useState<'athlete' | 'coach'>('athlete')
     const [loading, setLoading] = useState(false)
     const router = useRouter()
     const { toast } = useToast()
     const supabase = createClient()
 
-    const handleSignUp = async (e: React.FormEvent) => {
+    const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault()
         setLoading(true)
 
-        const { error } = await supabase.auth.signUp({
+        const { data, error } = await supabase.auth.signInWithPassword({
             email,
             password,
-            options: {
-                data: {
-                    full_name: fullName,
-                    role: role,
-                },
-            },
         })
 
         if (error) {
             toast({
                 variant: "destructive",
-                title: "Registrazione fallita",
+                title: "Login fallito",
                 description: error.message,
             })
             setLoading(false)
         } else {
             toast({
-                title: "Registrazione completata",
-                description: "Controlla la tua email per confermare l'account.",
+                title: "Login effettuato",
+                description: "Reindirizzamento in corso...",
             })
-            router.push('/login')
+            router.refresh()
+
+            // Check role and redirect
+            const role = data.user?.user_metadata?.role
+            if (role === 'coach') {
+                router.push('/coach')
+            } else if (role === 'athlete') {
+                router.push('/athlete')
+            } else {
+                router.push('/')
+            }
         }
     }
 
@@ -58,22 +59,11 @@ export default function SignUpPage() {
         <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
             <Card className="w-full max-w-md">
                 <CardHeader>
-                    <CardTitle>Registrati</CardTitle>
-                    <CardDescription>Crea un nuovo account per accedere alla piattaforma.</CardDescription>
+                    <CardTitle>Accedi</CardTitle>
+                    <CardDescription>Inserisci le tue credenziali per accedere alla piattaforma.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <form onSubmit={handleSignUp} className="space-y-4">
-                        <div className="space-y-2">
-                            <Label htmlFor="fullName">Nome Completo</Label>
-                            <Input
-                                id="fullName"
-                                type="text"
-                                placeholder="Mario Rossi"
-                                value={fullName}
-                                onChange={(e) => setFullName(e.target.value)}
-                                required
-                            />
-                        </div>
+                    <form onSubmit={handleLogin} className="space-y-4">
                         <div className="space-y-2">
                             <Label htmlFor="email">Email</Label>
                             <Input
@@ -95,25 +85,13 @@ export default function SignUpPage() {
                                 required
                             />
                         </div>
-                        <div className="space-y-2">
-                            <Label htmlFor="role">Ruolo</Label>
-                            <Select value={role} onValueChange={(val: 'athlete' | 'coach') => setRole(val)}>
-                                <SelectTrigger>
-                                    <SelectValue placeholder="Seleziona un ruolo" />
-                                </SelectTrigger>
-                                <SelectContent>
-                                    <SelectItem value="athlete">Atleta</SelectItem>
-                                    <SelectItem value="coach">Coach</SelectItem>
-                                </SelectContent>
-                            </Select>
-                        </div>
                         <Button type="submit" className="w-full" disabled={loading}>
-                            {loading ? 'Registrazione in corso...' : 'Registrati'}
+                            {loading ? 'Accesso in corso...' : 'Accedi'}
                         </Button>
                         <div className="text-center text-sm">
-                            Hai già un account?{' '}
-                            <Link href="/login" className="underline">
-                                Accedi
+                            Non hai un account?{' '}
+                            <Link href="/sign-up" className="underline">
+                                Registrati
                             </Link>
                         </div>
                     </form>
